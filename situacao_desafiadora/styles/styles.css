@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* CSS reset */
+
+body {
+  background-color: black;
+
+  height: 100vh;
+}
+/* Personalização do body, que no caso representa o "fundo" do site */
+
+.cards {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  /* Seta duas linhas e três colunas */
+
+  gap: 10px;
+  /* Espaço entre os elementos da classe pai cards */
+}
+
+/* nth-child sendo utilizado nesta função para diferenciar em cores os cards */
+.cards .card:nth-child(1) {
+  background-color: red;
+}
+
+.cards .card:nth-child(2) {
+  background-color: green;
+}
+
+.cards .card:nth-child(3) {
+  background-color: yellow;
+}
+
+.cards .card:nth-child(4) {
+  background-color: blue;
+}
+
+.cards .card:nth-child(5) {
+  background-color: orange;
+}
+
+.cards .card:nth-child(6) {
+  background-color: purple;
+}
+
+@media (max-width: 520px) {
+  .cards {
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr;
+  }
+
+  .cards .card:nth-child(1),
+  .cards .card:nth-child(2),
+  .cards .card:nth-child(3),
+  .cards .card:nth-child(4),
+  .cards .card:nth-child(5) {
+    grid-column: auto;
+  }
+}
+/* media para o site ficar responsivo */

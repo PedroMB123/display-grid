@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* CSS reset */
+
+body {
+  background-color: black;
+
+  height: 100vh;
+}
+
+.cards {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  /* Seta 5 linhas e quatro colunas */
+
+  gap: 10px;
+  /* Espaço entre os elementos da classe pai cards */
+}
+
+/* Neste exemplo não utiliza areas e sim posicionamento via linhas e colunas */
+.card:nth-child(1) {
+  background-color: red;
+  grid-column: 1/3;
+}
+
+.cards .card:nth-child(2) {
+  background-color: green;
+  grid-column: 3/4;
+}
+
+.card:nth-child(3) {
+  background-color: aqua;
+  grid-column: 4/5;
+}
+
+.cards .card:nth-child(4) {
+  background-color: floralwhite;
+  grid-column: 1/2;
+}
+
+.card:nth-child(5) {
+  background-color: indianred;
+  grid-column: 2/3;
+}
+
+.cards .card:nth-child(6) {
+  background-color: powderblue;
+  grid-column: 3/4;
+}
+
+.card:nth-child(7) {
+  background-color: wheat;
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+
+.cards .card:nth-child(8) {
+  background-color: rebeccapurple;
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+
+.card:nth-child(9) {
+  background-color: olive;
+  grid-row: 3/4;
+  grid-column: 4/5;
+}
+
+.cards .card:nth-child(10) {
+  background-color: fuchsia;
+  grid-row: 4/5;
+  grid-column: 3/4;
+}
+
+.card:nth-child(11) {
+  background-color: brown;
+  grid-row: 5/6;
+  grid-column: 1/4;
+}
+
+.cards .card:nth-child(12) {
+  background-color: burlywood;
+  grid-row: 5/6;
+  grid-column: 4/6;
+}
+
+@media (max-width: 520px) {
+  .cards {
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr;
+  }
+
+  .cards .card:nth-child(1),
+  .cards .card:nth-child(2),
+  .cards .card:nth-child(3),
+  .cards .card:nth-child(4),
+  .cards .card:nth-child(5),
+  .cards .card:nth-child(6),
+  .cards .card:nth-child(7),
+  .cards .card:nth-child(8),
+  .cards .card:nth-child(9),
+  .cards .card:nth-child(10),
+  .cards .card:nth-child(11),
+  .cards .card:nth-child(12) {
+    grid-column: auto;
+  }
+}
+/* media para o site ficar responsivo */
